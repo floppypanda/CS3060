@@ -1,2 +1,2 @@
 # CS3060
-Code from my Object Oriented Programming in C++ course.
+Code for my Object Oriented Programming in C++ course.
