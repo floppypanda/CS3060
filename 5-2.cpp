@@ -57,7 +57,7 @@ void deleteRepeats(char array[], int& size)
   /*Loops through characters and removes repeats.*/
   for (int index = 0; index < size; ++index)
   {
-    /*This assumes characters are in ASCII*/
+    /*This assumes all characters are alphabetic lowercase.*/
     uint32_t bitPosition = (uint32_t) (array[index] - 'a');
 
     if ((tracker.bitfield & (1 << bitPosition)) == 0)
@@ -84,7 +84,8 @@ void deleteRepeats(char array[], int& size)
         size by one.*/
         --size;
 
-      /*We then need to return the index to the appropriate index.*/
+      /*We then need to return the index location of the
+        element which has been shifted..*/
       --index;
     }
   }
