@@ -16,7 +16,6 @@ typedef struct AlphabetBitField
 } AlphabetBitField;
 
 void deleteRepeats(char array[], int& size);
-void printArray(char array[], int size);
 
 int main()
 {
@@ -34,17 +33,7 @@ int main()
 
   /*Printing array after deduplication.*/
   cout << "Array after deduplication: ";
-  printArray(testArray, testArraySize);
-}
-
-/*Prints a character array.*/
-void printArray(char array[], int size)
-{
-  for (int index = 0; index < size; ++index)
-  {
-    cout << array[index];
-  }
-  cout << endl;
+  cout << testArray << endl;
 }
 
 /*Deletes repeated characters from a character array.*/
@@ -85,7 +74,7 @@ void deleteRepeats(char array[], int& size)
         --size;
 
       /*We then need to return the index location of the
-        element which has been shifted..*/
+        element which has been shifted.*/
       --index;
     }
   }
